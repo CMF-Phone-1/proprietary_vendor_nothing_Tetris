@@ -26850,7 +26850,6 @@ cc_prebuilt_binary {
                 "proprietary/vendor/bin/hw/mt6878/camerahalserver",
             ],
             shared_libs: [
-                "libcamera_metadata_shim",
                 "liblog",
                 "libutils",
                 "libcutils",
