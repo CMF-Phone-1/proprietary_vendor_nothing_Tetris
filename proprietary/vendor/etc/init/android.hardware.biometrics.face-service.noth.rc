@@ -1,0 +1,8 @@
+service vendor.face-noth /vendor/bin/hw/android.hardware.biometrics.face-service.noth
+    class hal
+    user system
+    group camera system
+    ioprio rt 4
+    task_profiles CameraServiceCapacity HighPerformance
+    rlimit rtprio 10 10
+    capabilities SYS_NICE

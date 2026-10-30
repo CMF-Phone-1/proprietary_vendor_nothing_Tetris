@@ -3065,6 +3065,44 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
+    name: "libcamera2ndk_vendor-v33",
+    owner: "nothing",
+    strip: {
+        none: true,
+    },
+    target: {
+        android_arm64: {
+            srcs: [
+                "proprietary/vendor/lib64/libcamera2ndk_vendor-v33.so",
+            ],
+            shared_libs: [
+                "libbinder_ndk",
+                "libfmq",
+                "libhidlbase",
+                "libhardware",
+                "libnativewindow",
+                "liblog",
+                "libutils",
+                "libstagefright_foundation-v33",
+                "libcutils",
+                "libcamera_metadata",
+                "libmediandk",
+                "android.frameworks.cameraservice.common-V1-ndk",
+                "android.frameworks.cameraservice.device-V1-ndk",
+                "android.frameworks.cameraservice.service-V1-ndk",
+                "libc++",
+                "libc",
+                "libm",
+                "libdl",
+            ],
+        },
+    },
+    compile_multilib: "64",
+    prefer: true,
+    soc_specific: true,
+}
+
+cc_prebuilt_library_shared {
     name: "libcarrierconfig",
     owner: "nothing",
     strip: {
@@ -7923,6 +7961,30 @@ cc_prebuilt_library_shared {
                 "libc++",
                 "libc",
                 "libm",
+                "libdl",
+            ],
+        },
+    },
+    compile_multilib: "64",
+    prefer: true,
+    soc_specific: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "libstfaceunlockppl",
+    owner: "nothing",
+    strip: {
+        none: true,
+    },
+    target: {
+        android_arm64: {
+            srcs: [
+                "proprietary/vendor/lib64/libstfaceunlockppl.so",
+            ],
+            shared_libs: [
+                "liblog",
+                "libm",
+                "libc",
                 "libdl",
             ],
         },
@@ -26148,6 +26210,15 @@ prebuilt_etc_xml {
 }
 
 prebuilt_etc_xml {
+    name: "android.hardware.biometrics.face-service.noth.xml",
+    owner: "nothing",
+    src: "proprietary/vendor/etc/vintf/manifest/android.hardware.biometrics.face-service.noth.xml",
+    filename_from_src: true,
+    sub_dir: "vintf/manifest",
+    soc_specific: true,
+}
+
+prebuilt_etc_xml {
     name: "android.hardware.gatekeeper-service.trustonic.xml",
     owner: "nothing",
     src: "proprietary/vendor/etc/vintf/manifest/android.hardware.gatekeeper-service.trustonic.xml",
@@ -26491,6 +26562,43 @@ cc_prebuilt_binary {
         none: true,
     },
     prefer: true,
+    soc_specific: true,
+}
+
+cc_prebuilt_binary {
+    name: "android.hardware.biometrics.face-service.noth",
+    owner: "nothing",
+    target: {
+        android_arm64: {
+            srcs: [
+                "proprietary/vendor/bin/hw/android.hardware.biometrics.face-service.noth",
+            ],
+            shared_libs: [
+                "libbase",
+                "libbinder_ndk",
+                "android.hardware.biometrics.face-V3-ndk",
+                "android.hardware.biometrics.common-V3-ndk",
+                "libstfaceunlockppl",
+                "libcutils",
+                "libhidlbase",
+                "libutils",
+                "liblog",
+                "libui",
+                "libcamera2ndk_vendor-v33",
+                "libmediandk",
+                "libc++",
+                "libc",
+                "libm",
+                "libdl",
+            ],
+        },
+    },
+    compile_multilib: "64",
+    strip: {
+        none: true,
+    },
+    prefer: true,
+    relative_install_path: "hw",
     soc_specific: true,
 }
 

@@ -236,6 +236,7 @@ PRODUCT_COPY_FILES += \
     vendor/nothing/Tetris/proprietary/vendor/etc/gralloc/gpu.xml:$(TARGET_COPY_OUT_VENDOR)/etc/gralloc/gpu.xml \
     vendor/nothing/Tetris/proprietary/vendor/etc/gralloc/vpu.xml:$(TARGET_COPY_OUT_VENDOR)/etc/gralloc/vpu.xml \
     vendor/nothing/Tetris/proprietary/vendor/etc/init.insmod.mt6878.cfg:$(TARGET_COPY_OUT_VENDOR)/etc/init.insmod.mt6878.cfg \
+    vendor/nothing/Tetris/proprietary/vendor/etc/init/android.hardware.biometrics.face-service.noth.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/android.hardware.biometrics.face-service.noth.rc \
     vendor/nothing/Tetris/proprietary/vendor/etc/init/android.hardware.gatekeeper-service.trustonic.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/android.hardware.gatekeeper-service.trustonic.rc \
     vendor/nothing/Tetris/proprietary/vendor/etc/init/android.hardware.gnss-service.mediatek.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/android.hardware.gnss-service.mediatek.rc \
     vendor/nothing/Tetris/proprietary/vendor/etc/init/android.hardware.graphics.allocator-V2-service-mediatek.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/android.hardware.graphics.allocator-V2-service-mediatek.rc \
@@ -446,6 +447,7 @@ PRODUCT_PACKAGES += \
     libcamalgo.utility \
     libcamalgo.vsdofUtil \
     libcamalgo.warp \
+    libcamera2ndk_vendor-v33 \
     libcarrierconfig \
     libccci_util \
     libcmdl \
@@ -613,6 +615,7 @@ PRODUCT_PACKAGES += \
     libspeechparser_vendor \
     libst_ns_models \
     libstagefright_bufferqueue_helper-bp2a \
+    libstfaceunlockppl \
     libstmobile_rater \
     libstorage_otp \
     libsysenv \
@@ -1174,6 +1177,7 @@ PRODUCT_PACKAGES += \
     mediatek-ims-extension-plugin \
     mediatek-telephony-base \
     CommandService.xml \
+    android.hardware.biometrics.face-service.noth.xml \
     android.hardware.gatekeeper-service.trustonic.xml \
     android.hardware.neuralnetworks-shim-service-mtk.xml \
     android.hardware.security.keymint-service.trustonic.xml \
@@ -1200,6 +1204,7 @@ PRODUCT_PACKAGES += \
     conninfra_loader \
     fuelgauged \
     fuelgauged_nvram \
+    android.hardware.biometrics.face-service.noth \
     android.hardware.gatekeeper-service.trustonic \
     android.hardware.gnss-service.mediatek \
     android.hardware.graphics.composer@3.2-service \
